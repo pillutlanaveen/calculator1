@@ -1,0 +1,19 @@
+.calculator {
+  width: 300px;
+  margin: auto;
+}
+.input-group {
+  margin-bottom: 10px;
+  
+}
+.btn {
+  margin: 5px;
+  color: #180f11;
+}
+h1{
+
+  margin: auto;
+  text-align: center;
+  color: black;
+  
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Calculator</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+  .calculator {
+    width: 300px;
+    margin: auto;
+  }
+  .input-group {
+    margin-bottom: 10px;
+    
+  }
+  .btn {
+    margin: 5px;
+    color:white;
+  }
+  h1{
+
+    margin: auto;
+    text-align: center;
+    color: white;
+    
+  }
+  body {
+  background-image: url('https://images.unsplash.com/photo-1589318577086-eaf0fadffcd1?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+</style>
+</head>
+<body>
+  <center>
+    <h1> SIMPLE CALCULATOR 📲 </h1>
+<div class="calculator mt-5">
+  <input type="text" id="value1" class="form-control" placeholder="Enter First number">
+  <br>
+  <input type="text" id="value2" class="form-control" placeholder="Enter Second number">
+  <br>
+  <div class="input-group-append">
+    <button onclick="calculate('+')" class="btn btn-outline-secondary">+</button>
+    <button onclick="calculate('-')" class="btn btn-outline-secondary">-</button>
+    <button onclick="calculate('*')" class="btn btn-outline-secondary">*</button>
+    <button onclick="calculate('/')" class="btn btn-outline-secondary">/</button>
+    <button onclick="calculate('%')" class="btn btn-outline-secondary">%</button>
+  </div>
+  <br>
+  <input type="text" id="result" class="form-control" placeholder="Result" disabled>
+</div>
+
+<script>
+function calculate(operation) {
+  var value1 = parseFloat(document.getElementById('value1').value);
+  var value2 = parseFloat(document.getElementById('value2').value);
+  var result;
+
+  switch(operation) {
+    case '+':
+      result = value1 + value2;
+      break;
+    case '-':
+      result = value1 - value2;
+      break;
+    case '*':
+      result = value1 * value2;
+      break;
+    case '/':
+      result = value1 / value2;
+      break;
+    case '%':
+      result = value1 % value2;
+      break;
+  }
+
+  document.getElementById('result').value = result;
+}
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</center>
+</body>
+</html>
